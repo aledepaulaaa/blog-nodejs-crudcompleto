@@ -1,0 +1,46 @@
+<%- include ('../../partials/header') %>
+    <%- include ('../../partials/homenavbar') %>
+
+        <body>
+            <div class="container">
+                
+                <% result.articles.rows.forEach(article=> { %>
+                    <div class="card card-block">
+                        <div class="card-header">
+                            
+                            <h2>
+                                <%= article.title %>
+                            </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque blanditiis corporis
+                                placeat libero, tempora rem possimus suscipit asperiores repellat amet perferendis
+                                excepturi deserunt quisquam. Nostrum quisquam porro nobis dicta sapiente.</p>
+
+                        </div>
+                        <div class="card-body">
+                            <a href="/<%= article.slug %>" class="btn btn-success">Ler artigo</a>
+                            <a href="/admin/articles/new" style="float: right;" class="btn btn-success btn-criar-artigo">Criar artigo</a>
+                        </div>
+                    </div>
+                    <% }) %>
+
+                        <div class="row" style="margin-bottom: 1rem;">
+                            <div class="col col-12">
+                                <% if(result.page> 2) { %>
+                                    <a style="float:right; float:left;" href="/articles/page/<%= result.page - 1%>"
+                                        class="btn btn-success">Anterior</a>
+                                    <% } else if(result.page==2) { %>
+                                        <a style="float:right; float:left;" href="/"
+                                            class="btn btn-success">Anterior</a>
+                                        <% } %>
+
+
+                                            <% if(result.next) { %>
+                                                <a style="float:right;" href="/articles/page/<%= result.page + 1 %>"
+                                                    class="btn btn-success">Próximo</a>
+                                                <% } %>
+                            </div>
+
+                        </div>
+            </div>
+        </body>
+        <%- include ('../../partials/footer') %>

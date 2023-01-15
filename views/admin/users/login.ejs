@@ -1,0 +1,28 @@
+<%- include ('../../partials/header') %>
+
+  <div class="container text-center">
+    <div class="row rowstart align-items-start">
+      <div class="col">
+        <div class="img-bg">
+        </div>
+      </div>
+
+      <div class="col div-h1-span">
+        <h1 style="margin: 8rem 0 0 0; text-align: left;"><span class="span-conta">Leia</span> e se <br>inspire em <span
+            class="span-conta">artigos!</span></h1>
+        <form action="/authenticate" method="POST">
+          <input class="form-control" type="email"  name="email"  placeholder="E-mail" required>
+          <input class="form-control" type="password"  name="password" minlength="6"  placeholder="Senha"
+            required>
+          <div class="row">
+            <button type="submit" class="btn btn-success btn-entrar">Entrar</button>
+            <!-- <a class="forgot-pass" href="#">Esqueci minha senha</a> -->
+            <div class="create-account">
+              <p>Não possui conta? <a href="/admin/users/create"> criar</a></p>
+              <a href="/"><span class="span-conta">Ver artigos</span></a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

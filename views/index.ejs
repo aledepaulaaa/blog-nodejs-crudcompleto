@@ -1,0 +1,68 @@
+<%- include ('partials/header') %>
+    <%- include ('partials/homenavbar') %>
+
+        <body>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="display-4">
+                        Bem vindo(a)
+                    </h1>
+                    <h5>Me chamo <a href="https://alexandredepaula.app" target="_blank"> Alexandre de Paula
+                            &#129311;</a></h5>
+                    <p class="lead">Construi este blog de <span>Artigos</span> com o intuito de demonstrar meus conhecimentos em
+                        <span>Programação</span>. Toda a
+                        construção dele foi feita com <span>Node.js</span> tanto no <span>Front-end
+                        </span>quanto no
+                        <span>Back-end</span>. Veja tudo que usei em meu <span><a href="https://github.com/aledepaulaaa"
+                                target="_blank">Github</a></span>.
+                    </p>
+                    <span>Como funciona o Blog &#x2753;</span>
+                        <p>&#x2705; Ao acessar o menu no topo da página, você encontra as categorias que filtra todos os <span>artigos.</span></p>
+                        <p>&#x2705; Você pode criar <span>artigos e categorias</span> criando uma conta ao acessar o <span><a href="/admin/articles">painel admin</a></span> e logo abaixo, você consegue visualizar todos os <span>artigos.</span></p>
+                    <hr class="my-4">
+                   
+                    <p><span>Toda a customização dos estilos foram feitas por
+                            mim
+                            &#127774;</span></p>
+                   
+                </div>
+
+                <hr>
+                <div class="container">
+                    <div class="col-6">
+                        <div class="row">
+                            <h1 style="margin-top: 2rem;">Artigos gerais <span
+                                    style="font-size: 1.5rem;">&#128071;</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <% articles.forEach(article=> { %>
+                    <div class="card card-block">
+                        <div class="card-header">
+
+                            <h2>
+                                <%= article.title %>
+                            </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque blanditiis corporis
+                                placeat libero, tempora rem possimus suscipit asperiores repellat amet perferendis
+                                excepturi deserunt quisquam. Nostrum quisquam porro nobis dicta sapiente.</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="/<%= article.slug %>" class="btn btn-success">Ler artigo</a>
+                            <a href="/admin/articles/new" style="float: right;"
+                                class="btn btn-success btn-criar-artigo">Criar artigo</a>
+                        </div>
+                    </div>
+                    <% }) %>
+
+                        <div class="row" style="margin-bottom: 1rem;  float:right;">
+                            <div class="col col-12">
+                                <a type="button" href="/articles/page/2" class="btn btn-success">Próximo</a>
+                            </div>
+
+                        </div>
+            </div>
+        </body>
+
+        <%- include ('partials/footer') %>
+           

@@ -1,0 +1,50 @@
+<%- include ('../../partials/header') %>
+    <%- include ('../../partials/adminnavbar') %>
+
+        <div class="container">
+            <hr>
+            <div class="card card-block">
+                <div class="card-header">
+                    <h2>Novo artigo</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="/articles/save">
+                        <input class="form-control" type="text" name="title" placeholder="Defina o título do artigo">
+                        <br>
+                        <textarea name="body" id="article" cols="30" rows="10" placeholder="Escreva seu artigo"
+                            class="form-control"></textarea>
+                        <h4>Categoria</h4>
+                        <select name="category" class="form-control form-select">
+                            <% categories.forEach((category)=> { %>
+                                <option value="<%= category.id %>">
+                                    <%= category.title %>
+                                </option>
+                                <% }) %>
+                        </select>
+                        <br>
+                        <button  onclick="alertaartigo()" class="btn btn-success">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+        <%- include ('../../partials/footer') %>
+
+            <script src="/tinymce/tinymce.min.js"></script>
+            <script>
+
+                tinymce.init({
+                    selector: "#article",
+                    language: 'pt_BR',
+                    plugins: 'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons',
+                    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                    tinycomments_mode: 'embedded',
+                    tinycomments_author: 'Author name'
+                })
+                function alertaartigo(){
+                    alert("Artigo cadastrado com sucesso!")
+                }
+            </script>
+             
+           

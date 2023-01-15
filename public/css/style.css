@@ -1,0 +1,188 @@
+body{
+    background-color: #7fffd4;
+    font-family: 'Rubik', sans-serif;
+}
+
+h2{
+    margin-top: 2rem;
+}
+h4{
+    margin-top: 2rem; 
+}
+
+a{
+    text-decoration: none;
+    color:  #7fffd4;
+}
+a:hover{
+    color: #000000;
+}
+span{
+    color: #7fffd4;
+    font-weight: bold;
+}
+
+
+.table{
+    border: 1px solid #3c8e9c;
+}
+
+.table-usuarios{
+    background-color: #15b1cc;
+    border-radius: 12px;
+}
+
+.card-block{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 14px;
+    box-shadow: #000000dc 4px 4px 1px 1px;
+    background-color: #3c8e9c;
+    background-image: url(../img/cel_notebook.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    color: #fff;
+}
+
+
+.jumbotron{
+    margin-top: 2rem;
+    background: #3c8e9c;
+    padding: 12px;
+    border-radius: 14px;
+    box-shadow: #000000dc 4px 4px 1px 1px;
+    color:#ffffff;
+}
+
+/* Login  e Criar-conta*/
+.rowstart{
+    display: flex;
+    justify-content: center;
+    margin: 8rem auto;
+    border-radius: 16px;
+    background: #3c8e9c;
+}
+.img-bg{
+    background-image: url(../img/backgroundDiv.png);
+    height: 500px;
+}
+.span-conta{
+    font-family: 'Inter', sans-serif;
+    color: #36aeb7;
+}
+
+.span-conta:hover{
+    color:#000;
+}
+
+.div-h1-span{
+    background: #fff;
+    border-radius: 0 16px 16px 0;
+    height: 550px;
+}
+
+form{
+    margin-top: 1rem;
+}
+input{
+    margin-top: 20px;
+}
+
+/* Validação do Formulário */
+
+.btn-entrar{
+    margin: 1rem auto;
+    background: #3c8e9c;
+    border: none;
+    border-radius: 12px;
+    width: 180px;
+}
+.btn-criar{
+    margin: 1rem auto;
+    background: #3c8e9c;
+    border: none;
+    border-radius: 12px;
+    width: 200px;
+}
+.btn-criar-artigo:hover{
+    background: #133136;
+}
+
+.btn-criar-artigo{
+    background: #15b1cc;
+    border: none;
+}
+
+.forgot-pass{
+    color: #000;
+    font-size: 12px;
+}
+
+.forgot-pass:hover{
+    color:#265344;
+    text-decoration: underline;
+}
+
+.create-account {
+    color:#000;
+    font-size: 14px;
+}
+.create-account a{
+    color:#000;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+/* Fim Login/Criar-conta */
+
+/* Media querys */
+
+@media (max-width: 760px) {
+    .card-block{
+        min-width: 100%;
+    }
+    .div-h1-span h1{
+        font-size: 1.8rem;
+    }
+    .forgot-pass{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    .div-h1-span h1{
+        font-size: 1.2rem;
+    }
+    .btn-entrar{
+        width: auto;
+    }
+    .btn-criar{
+        width: auto;
+    }
+    .table-usuarios td{
+        font-size: 10px;
+    }
+}
+
+
+/* Fim Media querys */
+
+
+
+    /* scroll page */
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background:  #7fffd4;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #3c8e9c;
+    border-radius: 20px;
+    border: 3px solid #7fffd4;
+  }

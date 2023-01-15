@@ -1,0 +1,87 @@
+#header a{
+    color: #000;
+    display: flex;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#header a:hover{
+    background-color: #1730355e;
+    padding: 1rem;
+}
+
+#menu{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+@media (max-width: 992px){
+    #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        right: 0;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        background-color: #3c8e9c;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 50px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0  1rem;
+    }
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+    #hamburguer {
+        margin-top: 12px;
+        width: 45px;
+        background-color:#3c8e9c;
+    }
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 45px;
+        height: 2px;
+        background-color: currentColor;
+        margin-top: 5px;
+        transition: .4s;
+        position: relative;
+    }
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+        background: currentColor;
+    }
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+        background-color:#010708;
+    }
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        background-color:#010708;
+        top: -7px;
+
+    }
+}
+
+

@@ -1,0 +1,46 @@
+<%- include ('../../partials/header') %>
+  <%- include ('../../partials/adminnavbar') %>
+
+    <div class="container">
+      <h2 style="text-align: center;">Usuários cadastrados no Sistema &#128187;</h2>
+      <hr>
+      <div class="card card-block" style="width: 100%; margin: 1rem auto;">
+        <img src="../../../img/bbyoda.jpg" width="200"
+          style="border-radius: 12px; margin: 1rem auto; box-shadow: #000000b7 2px 2px 2px 2px;" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Dados</h5>
+          <table class="table table-bordered table-usuarios">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+        
+
+              </tr>
+            </thead>
+            <tbody>
+              <% users.forEach(user=> { %>
+                <tr>
+                  <td>
+                    <%= user.id %>
+                  </td>
+                  <td>
+                    <%= user.nome %>
+                  </td>
+                  <td>
+                    <%= user.email %>
+                  </td>
+                 
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-body">
+
+        </div>
+      </div>
+
+    </div>
+
+    <%- include ('../../partials/footer') %>

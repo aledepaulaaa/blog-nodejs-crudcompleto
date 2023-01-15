@@ -1,0 +1,77 @@
+<%- include ('../../partials/header') %>
+
+  <div class="container text-center">
+    <div class="row rowstart align-items-start">
+      <div class="col">
+        <div class="img-bg"></div>
+      </div>
+
+      <div class="col div-h1-span">
+        <h1 style="margin-top: 8rem;">Crie sua <span class="span-conta">conta!</span></h1>
+        <form method="POST" action="/users/create">
+          <p id="alerta"></p>
+          <input onchange="verificarNome()" type="text" id="nome" name="nome" class="form-control" placeholder="Nome"
+            required maxlength="45">
+          <input onchange="verificarEmail()" type="email" id="email" name="email" class="form-control"
+            placeholder="E-mail" required>
+          <input onchange="verificarPassword()" type="password" id="password" name="password" class="form-control"
+            placeholder="Senha" minlength="6" required>
+          <button type="submit" class="btn btn-success btn-criar">Criar</button>
+          <div class="row">
+            <div class="create-account">
+              <p>Já possui conta? <a href="/login"> entrar</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function verificarNome() {
+      let nome = document.getElementById("nome").value;
+
+      if (nome === "") {
+        let p = document.getElementById("alerta");
+        p.innerHTML = "Insira um nome válido";
+        p.style.color = "red";
+      } else {
+        let p = document.getElementById("alerta");
+        p.innerHTML = "Nome preenchido!";
+        p.style.color = "green";
+      }
+    }
+    function verificarEmail() {
+      let email = document.getElementById("email").value;
+
+      if (!email || !validarEmail(email)) {
+        let p = document.getElementById("alerta");
+        p.innerHTML = "E-mail inválido";
+        p.style.color = "red";
+      } else {
+        let p = document.getElementById("alerta");
+        p.innerHTML = "E-mail correto!";
+        p.style.color = "green";
+      }
+    }
+    function verificarPassword() {
+      let password = document.getElementById("password").value;
+
+      if (password.length < 6 || password === "") {
+        let p = document.getElementById("alerta");
+        p.innerHTML = "Mínino 6 caracteres";
+        p.style.color = "red";
+      } else {
+        let p = document.getElementById("alerta");
+        p.innerHTML = "Senha válida!";
+        p.style.color = "green";
+      }
+    }
+
+    function validarEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+
+
+  </script>
