@@ -41,6 +41,7 @@
 ## Pré-requisitos
 
 :warning: [Node](https://nodejs.org/en/download/)
+:warning: [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 
 Dependências e libs que você deve ter instalado na máquina antes de rodar a aplicação 
