@@ -74,7 +74,7 @@ git clone https://github.com/aledepaulaaa/blog
 
 
 ```
-$ npm install
+$ npm install, npm run watch, nodemon index.js, npm start etc
 ```
 
 ## Casos de Uso
