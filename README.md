@@ -79,7 +79,7 @@ $ npm install, npm run watch, nodemon index.js, npm start etc
 
 ## Casos de Uso
 
-Esta aplicação possui um banco de dados criado no MySQL Workbench através do Sequelize. Disponibilizei o banco de dados no repositório da aplicação. Mas neste caso, fica livre para criar um BD prório. Basta alterar as configurações em database/database.js
+Esta aplicação possui um banco de dados criado no MySQL Workbench através do Sequelize. Disponibilizei o banco de dados no repositório da aplicação. Mas neste caso, fica livre para alterar as configurações em database/database.js. Mas, caso tiver o MYSQL instalado, assim que a aplicação rodar já vai criar o banco de dados, só basta setar 'guiapress' que foi o nome definido para não ter que alterar tudo no código.
 
 
 ## Linguagens, dependencias e libs utilizadas :books:
