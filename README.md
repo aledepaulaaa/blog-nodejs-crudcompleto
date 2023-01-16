@@ -40,7 +40,7 @@
 
 ## Pré-requisitos
 
-:warning: [Node](https://nodejs.org/en/download/)
+:warning: [Node](https://nodejs.org/en/download/)<br>
 :warning: [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 
