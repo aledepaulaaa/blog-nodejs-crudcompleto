@@ -34,7 +34,7 @@
 
 ## Deploy da Aplicação :dash:
 
-> Link do deploy da aplicação: https://certificates-for-everyone-womakerscode.netlify.app/
+> Link do deploy da aplicação: (ainda não encontrei uma forma viável e gratuita)
 
 
 
