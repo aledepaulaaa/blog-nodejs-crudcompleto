@@ -24,7 +24,7 @@
 ## Descrição do projeto 
 
 <p align="justify">
-  Este projeto foi criado através do curso de Nodejs que estou fazendo pela UDEMY. Lecionado por Victor Lima do Guia do Programador. O projeto consiste em um blog de artigos onde o usuário possa ler, criar, excluir e editar. Além das funcionalidades básicas que o professor ensina, dei um "upgrade" estilizando do meu jeito. Esta aplicação consiste em um CRUD completo.
+  Este projeto foi criado através do curso de Nodejs. Lecionado por Victor Lima do Guia do Programador. O projeto consiste em um blog de artigos onde o usuário possa ler, criar, excluir e editar. Além das funcionalidades básicas que o professor ensina, dei um "upgrade" estilizando do meu jeito. Esta aplicação consiste em um CRUD completo.
 </p>
 
 ## Funcionalidades
@@ -79,7 +79,7 @@ $ npm install, npm run watch, nodemon index.js, npm start etc
 
 ## Casos de Uso
 
-Esta aplicação possui um banco de dados criado no MySQL Workbench através do Sequelize. Disponibilizei o banco de dados no repositório da aplicação. Mas neste caso, fica livre para alterar as configurações em database/database.js. Mas, caso tiver o MYSQL instalado, assim que a aplicação rodar já vai criar o banco de dados, só basta setar 'guiapress' que foi o nome definido para não ter que alterar tudo no código.
+Esta aplicação possui um banco de dados criado no MySQL através do Sequelize. Disponibilizei o banco de dados no repositório da aplicação. Mas neste caso, fica livre para alterar as configurações em database/database.js. Mas, caso tiver o MYSQL instalado, assim que a aplicação rodar já vai criar o banco de dados, só basta setar 'guiapress' que foi o nome definido para não ter que alterar tudo no código.
 
 
 ## Linguagens, dependencias e libs utilizadas :books:
